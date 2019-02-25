@@ -1,0 +1,463 @@
+﻿@model Task1.Models.SleepApneaModel
+
+@{
+    ViewBag.Title = "SleepApneaForm";
+}
+
+<h2>SleepApneaForm</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>SleepApneaModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Section 1</a></li>
+            <li><a data-toggle="tab" href="#Section_2">Section 2</a></li>
+            <li><a data-toggle="tab" href="#Section_3">Section 3</a></li>
+            <li><a data-toggle="tab" href="#Section_4">Section 4</a></li>
+            <li><a data-toggle="tab" href="#Section_5">Section 5</a></li>
+            <li><a data-toggle="tab" href="#Section_6">Section 6</a></li>
+            <li><a data-toggle="tab" href="#Section_7">Section 7</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="Section_1" class="tab-pane fade in active">
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div id="Section_1">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SleepApnea, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SleepApnea, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SleepApnea, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE)
+                            @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE_ICD, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE_ICD, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE_ICD, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE_DATE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE_DATE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE_DATE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_CENTRAL, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_CENTRAL)
+                            @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_CENTRAL, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_CENTRAL_ICD, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_CENTRAL_ICD, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_CENTRAL_ICD, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_CENTRAL_DATE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_CENTRAL_DATE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_CENTRAL_DATE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_MIXED, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_MIXED)
+                            @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_MIXED, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_MIXED_ICD, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_MIXED_ICD, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_MIXED_ICD, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_MIXED_DATE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_MIXED_DATE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_MIXED_DATE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER)
+                            @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER_ICD, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER_ICD, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER_ICD, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER_DATE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER_DATE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER_DATE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER_EDIT, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER_EDIT, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_OTHER_EDIT, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIAGNOSIS_SLEEP_APNEA_ADDITIONAL, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DIAGNOSIS_SLEEP_APNEA_ADDITIONAL, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DIAGNOSIS_SLEEP_APNEA_ADDITIONAL, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="Section_2">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HISTORY_SLEEP_APNEA_DESCRIBE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.HISTORY_SLEEP_APNEA_DESCRIBE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.HISTORY_SLEEP_APNEA_DESCRIBE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HISTORY_SLEEP_APNEA_MEDS, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.HISTORY_SLEEP_APNEA_MEDS, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.HISTORY_SLEEP_APNEA_MEDS, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HISTORY_SLEEP_APNEA_MEDS_DESCRIBE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.HISTORY_SLEEP_APNEA_MEDS_DESCRIBE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.HISTORY_SLEEP_APNEA_MEDS_DESCRIBE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SleepApneaContinuousPositiveAirwayPressureMachine, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SleepApneaContinuousPositiveAirwayPressureMachine, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SleepApneaContinuousPositiveAirwayPressureMachine, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="Section_3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SleepApneaFindings, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SleepApneaFindings, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SleepApneaFindings, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SleepApneaPersistentDaytimeHypersomnolence, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.SleepApneaPersistentDaytimeHypersomnolence)
+                            @Html.ValidationMessageFor(model => model.SleepApneaPersistentDaytimeHypersomnolence, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SleepApneaCardonDioxideRetention, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.SleepApneaCardonDioxideRetention)
+                            @Html.ValidationMessageFor(model => model.SleepApneaCardonDioxideRetention, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SleepApneaChronicRespiratoryFailure, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.SleepApneaChronicRespiratoryFailure)
+                            @Html.ValidationMessageFor(model => model.SleepApneaChronicRespiratoryFailure, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SleepApneaCorPulmonale, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.SleepApneaCorPulmonale)
+                            @Html.ValidationMessageFor(model => model.SleepApneaCorPulmonale, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SleepApneaRequiresTracheostomy, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.SleepApneaRequiresTracheostomy)
+                            @Html.ValidationMessageFor(model => model.SleepApneaRequiresTracheostomy, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_FINDINGS_OTHER, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_FINDINGS_OTHER)
+                            @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_FINDINGS_OTHER, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_FINDINGS_OTHER_DESCRIBE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_FINDINGS_OTHER_DESCRIBE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_FINDINGS_OTHER_DESCRIBE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="Section_4">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_OPP_OTHER_PERT, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_OPP_OTHER_PERT, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_OPP_OTHER_PERT, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_OPP_OTHER_PERT_DESCRIBE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_OPP_OTHER_PERT_DESCRIBE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_OPP_OTHER_PERT_DESCRIBE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_YES, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_YES, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_YES, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_LOCATION, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_LOCATION, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_LOCATION, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_LENGTH, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_LENGTH, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_LENGTH, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_WIDTH, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_WIDTH, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_WIDTH, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_ADDITIONAL_COMMENTS, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_ADDITIONAL_COMMENTS, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_OPP_SCARS_ADDITIONAL_COMMENTS, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="Section_5">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SleepApneaDocumentedSleepDisorderBreathing, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SleepApneaDocumentedSleepDisorderBreathing, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SleepApneaDocumentedSleepDisorderBreathing, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_DATE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_DATE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_DATE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_FACILITY, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_FACILITY, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_FACILITY, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_RESULTS, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_RESULTS, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_RESULTS, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_DT_OTHER_SIGN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_DT_OTHER_SIGN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_DT_OTHER_SIGN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_DT_OTHER_SIGN_DESCRIBE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_DT_OTHER_SIGN_DESCRIBE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_DT_OTHER_SIGN_DESCRIBE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="Section_6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_FI, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_FI, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_FI, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_FI_DESCRIBE, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_FI_DESCRIBE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_FI_DESCRIBE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="Section_7">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXAM_SLEEP_APNEA_REMARKS, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EXAM_SLEEP_APNEA_REMARKS, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EXAM_SLEEP_APNEA_REMARKS, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
