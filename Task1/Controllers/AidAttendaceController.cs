@@ -20,10 +20,10 @@ namespace Task1.Controllers
         public ActionResult AidAndAttendance(AidAndAttendance aidAndAttendance )
         {
             
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+           // {
 
-            }
+            //}
             return View();
         }
     }

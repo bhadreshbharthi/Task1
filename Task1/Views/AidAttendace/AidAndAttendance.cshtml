@@ -5,8 +5,11 @@
 }
 
 <h2>AidAndAttendance</h2>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("AidAndAttendance", "AidAttendace", FormMethod.Post, new { @id = "form1" }))
 {
     @Html.AntiForgeryToken()
 
@@ -82,7 +85,7 @@
             <label class="control-label col-md-2">Claimant Hospitalized:</label>
             <div class="col-md-10">
 
-                @Html.RadioButton("Is_Claimant_Hospitalized_Yes", false, htmlAttributes: new { value = "Yes", @class = "radio-inline Is_Claimant_Hospitalized_Yes" }) Yes
+                @Html.RadioButton("Is_Claimant_Hospitalized_Yes", true, htmlAttributes: new { value = "Yes", @class = "radio-inline Is_Claimant_Hospitalized_Yes" }) Yes
                 @*@Html.EditorFor(model => model.Is_Claimant_Hospitalized_Yes, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.Is_Claimant_Hospitalized_Yes, "", new { @class = "text-danger" })
 
@@ -98,7 +101,7 @@
             </div>
         </div>
 
-        <div class="form-group prop_8b"  style="border:2px outset black;border-radius:10px">
+        <div class="form-group prop_8b" style="border:2px outset black;border-radius:10px">
             @Html.LabelFor(model => model.NameAndAddressOfHospital, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NameAndAddressOfHospital, new { htmlAttributes = new { @class = "form-control" } })
@@ -106,6 +109,8 @@
             </div>
         </div>
         <script>
+            $("#Is_Claimant_Hospitalized_No").prop("checked", true);
+
             $(".prop_8b").hide();
 
             $("#Is_Claimant_Hospitalized_Yes").change(function () {
@@ -149,7 +154,7 @@
             <div class="col-md-10">
                 <input type="radio" name="Sex" class="Sex radio-inline" data-name="Male" value="Male" /> Male
                 <input type="radio" name="Sex" class="Sex radio-inline" data-name="Female" value="Female" /> Female
-                <input type="radio" name="Sex" class="Sex radio-inline" data-name="Other" value="Other"/> Other
+                <input type="radio" name="Sex" class="Sex radio-inline" data-name="Other" value="Other" /> Other
                 @Html.ValidationMessageFor(model => model.Sex, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -258,6 +263,8 @@
 
 
                 <script>
+                    $("#Ind_Num_Bed_9pmto5am").prop("checked", true);
+
                     $("#Ind_Num_Bed_9pmto5am").change(function () {
                         var a = $(this).val();
                         //alert(a);
@@ -314,6 +321,8 @@
         </div>
 
         <script>
+            $("#Claimant_feed_Yes").prop("checked", true);
+
             $(".Claimant_No_Describe").hide();
 
             $("#Claimant_feed_No").change(function () {
@@ -353,7 +362,7 @@
             </div>
         </div>
 
-        <div class="form-group Claimant_Prep_Meal_No_Describe"  style="border:2px outset black;border-radius:10px">
+        <div class="form-group Claimant_Prep_Meal_No_Describe" style="border:2px outset black;border-radius:10px">
             @Html.LabelFor(model => model.Claimant_Prep_Meal_No_Describe, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Claimant_Prep_Meal_No_Describe, new { htmlAttributes = new { @class = "form-control" } })
@@ -387,7 +396,7 @@
 
         </div>
 
-        <div class="form-group Claimant_Assistance_Yes_Describe"  style="border:2px outset black;border-radius:10px">
+        <div class="form-group Claimant_Assistance_Yes_Describe" style="border:2px outset black;border-radius:10px">
             @Html.LabelFor(model => model.Claimant_Assistance_Yes_Describe, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Claimant_Assistance_Yes_Describe, new { htmlAttributes = new { @class = "form-control" } })
@@ -396,6 +405,8 @@
         </div>
 
         <script>
+            $("#Claimant_Assistance_No").prop("checked", true);
+
             $(".Claimant_Assistance_Yes_Describe").hide();
 
             $("#Claimant_Assistance_No").change(function () {
@@ -421,7 +432,7 @@
                 @Html.ValidationMessageFor(model => model.Claimant_Legally_Blind_No, "", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="Claimant_Legally_Blind_Yes_Describe"  style="border:2px outset black;border-radius:10px">
+        <div class="Claimant_Legally_Blind_Yes_Describe" style="border:2px outset black;border-radius:10px">
             <div class="form-group">
                 @Html.LabelFor(model => model.Claimant_Legally_Blind_Yes_Describe, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -453,6 +464,8 @@
 
 
         <script>
+            $("#Claimant_Legally_Blind_No").prop("checked", true);
+
             $(".Claimant_Legally_Blind_Yes_Describe").hide();
 
             $("#Claimant_Legally_Blind_No").change(function () {
@@ -492,6 +505,8 @@
 
 
         <script>
+            $("#Claimant_Care_No").prop("checked", true);
+
             $(".Claimant_Care_Yes_Describe").hide();
 
             $("#Claimant_Care_No").change(function () {
@@ -540,6 +555,8 @@
 
 
         <script>
+            $("#Claimant_Medication_Managemant_No").prop("checked", true);
+
             $(".Claimant_Medication_Managemant_Yes_Describe").hide();
 
             $("#Claimant_Medication_Managemant_No").change(function () {
@@ -603,6 +620,8 @@
 
 
         <script>
+            $("#Claimant_Ability_Financial_Yes").prop("checked", true);
+
             $(".Claimant_Ability_Financial_No_Describe").hide();
 
             $("#Claimant_Ability_Financial_No").change(function () {
@@ -636,7 +655,7 @@
 
         <div class="form-group">
             <label class="control-label col-md-2">Restrictions Of Upper Extremity</label>
-            
+
             <div class="col-md-10">
                 @Html.EditorFor(model => model.RestrictionsOfUpperExtremity, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.RestrictionsOfUpperExtremity, "", new { @class = "text-danger" })
@@ -678,7 +697,7 @@
             <label class="control-label col-md-2">
                 Claimant Circumtances
             </label>
-            
+
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Claimant_Circumtances, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Claimant_Circumtances, "", new { @class = "text-danger" })
@@ -695,9 +714,9 @@
                 @Html.ValidationMessageFor(model => model.Locomotion_Yes, "", new { @class = "text-danger" })
             </div>
         </div>
-        
+
         <div class="Locomotion" style="border:2px outset black;border-radius:10px">
-            
+
             <div class="form-group">
 
                 @Html.LabelFor(model => model.Locomotion_Yes_1Block, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -744,6 +763,8 @@
 
 
         <script>
+            $("#Locomotion_No").prop("checked", true);
+
             $(".Locomotion").hide();
 
             $("#Locomotion_Yes").change(function () {
@@ -831,3 +852,5 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+<script src="~/Scripts/validation.js"></script>

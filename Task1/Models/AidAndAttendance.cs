@@ -10,32 +10,32 @@ namespace Task1.Models
     {
 
         // SECTION I 
-        [Required]
+        //[Required]
         public string F_M_L_Veteran { get; set; }
 
-        [Required]
+        //[Required]
         public string F_M_L_Claimant { get; set; }
 
-        [Required]
+        //[Required]
         public string Rel_Of_Cl_Vet { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Vet_SSN { get; set; }
 
-        [Required]
+        //[Required]
         public string Cla_SSN { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Claim_Num { get; set; }
 
         [DataType(DataType.Date)]
-        [Required]
+        //[Required]
         public string Date_Of_Exam { get; set; }
 
         [DataType(DataType.MultilineText)]
-        [Required]
+        //[Required]
         public string Home_Address { get; set; }
 
 
@@ -51,50 +51,50 @@ namespace Task1.Models
         public string CompleteDiagnosis { get; set; }
 
 
-        [Required]
-        [RegularExpression("^[0-9]{1,3}$",ErrorMessage = "Enter Valid Age!")]
+        //[Required]
+        //[RegularExpression("^[0-9]{1,3}$",ErrorMessage = "Enter Valid Age!")]
         public string Age { get; set; }
 
-        [Required]
+        //[Required]
         public string Sex { get; set; }
 
-        [Required]
+        //[Required]
         public string Weight_Actual_Lbs { get; set; }
 
-        [Required]
+        //[Required]
         public string Weight_Estimated_Lbs { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Height_Feet { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Height_Inches { get; set; }
 
 
-        [Required]
+        //[Required]
         [DataType(DataType.MultilineText)]
         public string Nutrition { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Gait { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Blood_Presuure { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Pulse_Rate { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Resp_Rate { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Dis_Act { get; set; }
 
         public string Ind_Num_Bed_9pmto5am { get; set; }
@@ -166,31 +166,31 @@ namespace Task1.Models
         public string Claimant_Ability_Financial_No_Describe { get; set; }
 
 
-        [Required]
+        //[Required]
         [Display(Name = "Posture and General Appearance")]
         public string PostureAndGeneralAppearance { get; set; }
 
 
-        [Required]
+        //[Required]
         [Display(Name = "Restrictions Of Upper Extremity")]
         public string RestrictionsOfUpperExtremity { get; set; }
 
 
-        [Required]
+        //[Required]
         [Display(Name = "Restrictions Of Lower Extremity")]
         public string RestrictionsOfLowerExtremity { get; set; }
 
 
-        [Required]
+        //[Required]
         [Display(Name = "Restriction Of Spine trunk Neck")]
         public string Restriction_Of_Spine_trunk_Neck { get; set; }
 
 
-        [Required]
+        //[Required]
         public string The_Loss_Of_Bowel { get; set; }
 
 
-        [Required]
+        //[Required]
         public string Claimant_Circumtances { get; set; }
 
         public string Locomotion_Yes { get; set; }
@@ -205,23 +205,23 @@ namespace Task1.Models
         public string Locomotion_No { get; set; }
         //Section 2
 
-        [Required]
+        //[Required]
         public string Printed_Name_Examiner { get; set; }
 
 
-        [Required]
+        //[Required]
         public string SignatureExaminer { get; set; }
 
 
-        [Required]
+        //[Required]
         [DataType(DataType.Date)]
         public string DateSigned { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Name and Address Medical Facility")]
         public string Name_And_Address_Medical_Facility { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Phone Number Medical Facility")]
         public string PhoneNumberMedicalFacility { get; set; }
 
